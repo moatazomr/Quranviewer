@@ -32,7 +32,7 @@ $(function () {
 
     }
 
-    fetch("http://localhost:8081/out/pages/gz/p-10.txt")
+    fetch("https://moatazomr.github.io/Quranviewer/v2/pages/gz/p-3.txt")
         .then(function (response) {
             if (!response.ok) {
                 throw new Error("HTTP error, status = " + response.status);
