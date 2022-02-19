@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)http://10.8.0.1:8080/ASDAWeb/resources/modules/dialer/index.html?user=207 -->
+<html lang="en"><head>
+
+<script   src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script  src="base64-string.js"></script>
+<script  src="lz-string.min.js"></script>
+<script>
+
+  $.get('all.txt', function(data) {   
+  return;
+  
+var string = data;
+alert("Size of sample is: " + string.length);
+var compressed = LZString.compress(string);
+console.log(LZString.compressToBase64 (string));
+alert("Size of compressed sample is: " + compressed.length);
+string = LZString.decompress(compressed);
+alert("Sample is: " + string[1]);
+
+});
+
+$.get('z.txt', function(data) {   
+  
+  
+var string = data;
+//alert("Size of sample is: " + string.length);
+var org = LZString.decompressFromBase64(string);
+
+$('#d').html(org);
+});
+</script>
+</head>
+<body>
+    <div id='d' ></div>
+ 
+</body>
+</html>
