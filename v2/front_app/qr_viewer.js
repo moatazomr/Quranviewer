@@ -186,9 +186,9 @@ function pageloaded() {
     };
 
     var tgroup = s.select(".pageviewer");
-    rct = s.rect(0, 0, 245, 375);
-    rct.attr({ 'fill-opacity': "0.5" })
-    tgroup.add(rct);
+  //  rct = s.rect(0, 0, 245, 375);
+  //  rct.attr({ 'fill-opacity': "0.5" })
+  //  tgroup.add(rct);
 
     tgroup.drag(moveFnc, startFnc, endFnc);
         
